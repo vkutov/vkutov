@@ -1,10 +1,9 @@
 <?php
 
-//lets rock!
 
 //this three dimensial array will keep all the (archived)concert data. The keys of the first dimension are the venues. 
 //The values are two dimensial arrays. The singers that have performed in the venue are the keys and the income of the cities become the values
-//eg music_statistics=>array("Arena Armeec"=>array("Judas Priest"=>2 000 000))
+//eg music_statistics=>array("Arena Armeec"=>array("Rainbow"=>2 000 000))
 $music_statistics = array();
 //this array will keep the income by venue so that we ca sort it
 $income_venue = array();
@@ -55,7 +54,7 @@ while (($concert = readline()) != "End") {
 //sort the venues by their income(values)
 arsort($venue_income);
 foreach ($venue_income as $arena => $profit) {
-//get the key->value pair of the array of the music statistics e.g. "Wacken"=>array(Metallica=>2 000 000)
+//get the key->value pair of the array of the music statistics e.g. "Wacken"=>array(Deep Purple=>2 000 000)
     echo $arena."\n";
 //sort the singers within the venues by their income(values)
     arsort($music_statistics[$arena]);
@@ -70,8 +69,8 @@ foreach ($venue_income as $arena => $profit) {
 
 
 
-//** Сръбско Unleashed
-//Admit it – the heavy metal is your favorite sort of music. You never miss a concert and you have become quite the geek
+
+//Admit it – the hard rock is your favorite sort of music. You never miss a concert and you have become quite the geek
 //concerning everything involved with hard rock. You can’t decide between all the singers you know who your favorite
 //one is. One way to find out is to keep statistics of how much money their concerts make. Write a program that does
 //all the boring calculations for you.
